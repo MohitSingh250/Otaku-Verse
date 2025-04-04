@@ -1,0 +1,47 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFD700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.login-btn {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.login-btn {
+  background: gray;
+  color: white;
+  border-radius: 5px;
+}
+.watchlist-btn {
+  background: #FFD700;
+  color: rgb(10, 2, 2);
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.watchlist-btn:hover {
+  background: #e68900;
+}

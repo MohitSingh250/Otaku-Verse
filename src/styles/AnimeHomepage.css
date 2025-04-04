@@ -1,0 +1,106 @@
+.header {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.search-box {
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 300px;
+}
+
+.search-box:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+}
+.content {
+    display: flex;
+    gap: 30px;
+    margin-top: 25px;
+}
+.anime-grid {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+}
+.anime-card {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    text-align: center;
+    padding: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.anime-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.anime-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.anime-hover-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    border-radius: 0 0 12px 12px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.anime-card:hover .anime-hover-details {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sidebar {
+    flex: 1;
+}
+
+.loading-placeholder {
+    width: 150px;
+    height: 200px;
+    background: linear-gradient(90deg, #ececec, #f5f5f5, #ececec);
+    background-size: 200% 100%;
+    border-radius: 12px;
+    animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.no-results {
+    text-align: center;
+    font-size: 1.2rem;
+    color: gray;
+    margin-top: 20px;
+}
