@@ -1,34 +1,49 @@
-.sidebar {
-    padding: 15px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    position: fixed;
-    z-index: 2;
-    top: 30%;
-    left: 0;
-  }
-  
-  .categories {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .categories li {
-    cursor: pointer;
-    padding: 10px;
-    margin: 5px 0;
-    background: #f3f3f3;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .categories li:hover {
-    background: #ddd;
-  }
-  
-  .categories .active {
-    background: #3b82f6;
-    color: white;
-    font-weight: bold;
-  }
-  
+/* Genre Filter Container */
+.genre-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Title */
+.genre-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff9900f1;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Genre List */
+.genre-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Genre Item */
+.genre-item {
+  padding: 8px 15px;
+  background: #2c2c2c;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.9rem;
+}
+
+.genre-item:hover {
+  background: #FFD700;
+  color: black;
+}
+
+.genre-item.active {
+  background: #FFD700;
+  color: black;
+  font-weight: bold;
+}

@@ -19,17 +19,30 @@
     border-color: #007bff;
     box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
 }
+
 .content {
     display: flex;
+    flex-direction: column;
     gap: 30px;
     margin-top: 25px;
+    align-items: center;
 }
+
+.genre-filter-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .anime-grid {
-    flex: 3;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 .anime-card {
     position: relative;
     background: #fff;
@@ -77,7 +90,12 @@
 }
 
 .sidebar {
-    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
 }
 
 .loading-placeholder {

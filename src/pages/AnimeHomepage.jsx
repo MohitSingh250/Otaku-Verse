@@ -52,20 +52,11 @@ export default function AnimeHomepage() {
 
   return (
     <div className="container">
-      <Navbar />
+      {/* Pass search & setSearch as props to Navbar */}
+      <Navbar search={search} setSearch={setSearch} />
+      
       <AnimeSlider anime={getRandomAnime(animeList, 5)} />
-
-      <header className="header">
-        <h1>Trending This Week</h1>
-        <input
-          type="text"
-          placeholder="What are you searching for?"
-          className="search-box"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-      </header>
-
+      <GenreFilter genres={genres} selectedGenre={selectedGenre} setSelectedGenre={setSelectedGenre} />
       <div className="content">
         <section className="anime-grid">
           {loading ? (
@@ -96,7 +87,7 @@ export default function AnimeHomepage() {
           )}
         </section>
 
-        <GenreFilter genres={genres} selectedGenre={selectedGenre} setSelectedGenre={setSelectedGenre} />
+        
       </div>
     </div>
   );

@@ -1,9 +1,8 @@
-// Navbar.jsx
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../styles/Navbar.css";
 
-export default function Navbar() {
+export default function Navbar({ search, setSearch }) {
   const [watchlistCount, setWatchlistCount] = useState(0);
 
   useEffect(() => {
@@ -14,7 +13,18 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="logo">
-      Otaku Verse</Link>
+        Otaku Verse
+      </Link>
+
+      {/* Search Bar in Navbar */}
+      <input
+        type="text"
+        placeholder="Search Anime..."
+        className="nav-search-box"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+
       <div className="nav-links">
         <Link to="/watchlist" className="watchlist-btn">
           📋 Watchlist ({watchlistCount})

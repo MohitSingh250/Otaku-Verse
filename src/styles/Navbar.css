@@ -4,44 +4,85 @@
   align-items: center;
   background: black;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 10;
 }
 
+/* Logo */
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   text-decoration: none;
-  color: #FFD700;
+  color: #ff9900f1;
 }
 
+/* Centered Search Box */
+.nav-search-box {
+  flex: 1;
+  max-width: 400px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Navbar Links */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
+/* Login Button */
 .login-btn {
-  padding: 5px 10px;
+  background-color: #FFD700;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn:hover {
+  background-color: #ff9900f1;
+  transform: scale(1.05);
 }
 
 
-.login-btn {
-  background: gray;
-  color: white;
-  border-radius: 5px;
-}
+/* Watchlist Button */
 .watchlist-btn {
   background: #FFD700;
-  color: rgb(10, 2, 2);
+  color: black;
   padding: 8px 15px;
   border-radius: 5px;
   text-decoration: none;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
 .watchlist-btn:hover {
-  background: #e68900;
+  background: #ff9900f1;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-search-box {
+    width: 100%;
+    max-width: none;
+  }
 }

@@ -2,20 +2,19 @@ import "../styles/GenreFilter.css";
 
 export default function GenreFilter({ genres, selectedGenre, setSelectedGenre }) {
   return (
-    <aside className="sidebar">
-      <h3>My Favourite Categories</h3>
-      <p>Favouriting categories will improve your recommendations.</p>
-      <ul className="categories">
+    <div className="genre-container">
+      <h3 className="genre-title">Famous Categories</h3>
+      <ul className="genre-list">
         {genres.map((genre) => (
           <li
             key={genre}
-            className={genre === selectedGenre ? "active" : ""}
+            className={`genre-item ${genre === selectedGenre ? "active" : ""}`}
             onClick={() => setSelectedGenre(genre === selectedGenre ? null : genre)}
           >
             {genre}
           </li>
         ))}
       </ul>
-    </aside>
+    </div>
   );
 }
